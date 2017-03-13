@@ -17,10 +17,6 @@ namespace Sitecore.Support
     {
       var installers = GetInstallers();
       installers["addeditems_Upgrade"] = new Sitecore.Support.Update.Installer.Items.AddItemCommandInstaller();
-      foreach (var key in installers.Keys)
-      {
-        Log.Info(key + " : " + installers[key].GetType().FullName, this);
-      }
     }
 
     private Dictionary<string, ISink<PackageEntry>> GetInstallers()
